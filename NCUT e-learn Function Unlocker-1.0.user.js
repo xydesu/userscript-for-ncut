@@ -1,14 +1,14 @@
 // ==UserScript==
-// @name         NCUT e-Learning Function Unlocker
+// @name         NCUT e-learn Function Unlocker
 // @namespace    http://tampermonkey.net/
-// @version      1.0
-// @description  Unlock NCUT e-Learning Function such as F12 and select text
+// @version      1.1
+// @description  Unlock NCUT e-learn Function such as F12 and select text
 // @author       xy
 // @match        https://elearn.ncut.edu.tw/*
 // @grant        none
 // @run-at       document-start
-// @updateURL    https://raw.githubusercontent.com/XingYanTW/userscript-for-ncut/main/NCUT e-Learning Function Unlocker-1.0.user.js
-// @downloadURL  https://raw.githubusercontent.com/XingYanTW/userscript-for-ncut/main/NCUT e-Learning Function Unlocker-1.0.user.js
+// @updateURL    https://raw.githubusercontent.com/XingYanTW/userscript-for-ncut/main/NCUT e-learn Function Unlocker-1.1.user.js
+// @downloadURL  https://raw.githubusercontent.com/XingYanTW/userscript-for-ncut/main/NCUT e-learn Function Unlocker-1.1.user.js
 // ==/UserScript==
 
 (function() {
