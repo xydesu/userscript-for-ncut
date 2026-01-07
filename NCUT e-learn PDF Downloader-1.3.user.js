@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NCUT e-learn PDF Downloader
 // @namespace    http://tampermonkey.net/
-// @version      1.4
+// @version      1.5
 // @description  Download Locked PDF File
 // @author       xy
 // @match        https://elearn.ncut.edu.tw/learn/path/viewPDF.php*
@@ -68,12 +68,12 @@
             const a = document.createElement('a');
             a.href = fullUrl;
             
-            // Fix filename: keep part after 'content/' and decode
-            let fileName = pdfPath;
-            if (fileName.includes('content/')) {
-                fileName = fileName.split('content/')[1];
-            }
-            a.download = decodeURIComponent(fileName);
+            // Fix filename: extract just the filename from path
+            let cleanPath = pdfPath.split('?')[0]; // Remove query string
+            cleanPath = decodeURIComponent(cleanPath); // Decode URI components
+            const fileName = cleanPath.substring(cleanPath.lastIndexOf('/') + 1); // Get string after last slash
+            
+            a.download = fileName;
 
             document.body.appendChild(a);
             a.click();
