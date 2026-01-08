@@ -73,15 +73,6 @@
             `;
             (document.head || document.documentElement).appendChild(style);
         }
-
-        // Fix launchActivity links target from _blank to null
-        const links = document.querySelectorAll('a[onclick*="launchActivity"]');
-        links.forEach(link => {
-            const onclick = link.getAttribute('onclick');
-            if (onclick && onclick.includes("'_blank'")) {
-                link.setAttribute('onclick', onclick.replace("'_blank'", "null"));
-            }
-        });
     }
 
     unlockUI();
