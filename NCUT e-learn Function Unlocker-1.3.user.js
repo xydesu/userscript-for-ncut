@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name         NCUT e-learn Function Unlocker
 // @namespace    http://tampermonkey.net/
-// @version      1.2
-// @description  Unlock NCUT e-learn Function such as F12, select text and enable copy
+// @version      1.3
+// @description  Unlock NCUT e-learn Function such as F12, select text, enable copy and fix link target
 // @author       xy
 // @match        https://elearn.ncut.edu.tw/*
 // @grant        none
 // @run-at       document-start
-// @updateURL    https://raw.githubusercontent.com/XingYanTW/userscript-for-ncut/main/NCUT e-learn Function Unlocker-1.2.user.js
-// @downloadURL  https://raw.githubusercontent.com/XingYanTW/userscript-for-ncut/main/NCUT e-learn Function Unlocker-1.2.user.js
+// @updateURL    https://raw.githubusercontent.com/XingYanTW/userscript-for-ncut/main/NCUT e-learn Function Unlocker-1.3.user.js
+// @downloadURL  https://raw.githubusercontent.com/XingYanTW/userscript-for-ncut/main/NCUT e-learn Function Unlocker-1.3.user.js
 // ==/UserScript==
 
 (function() {
@@ -73,6 +73,15 @@
             `;
             (document.head || document.documentElement).appendChild(style);
         }
+
+        // Fix launchActivity links target from _blank to null
+        const links = document.querySelectorAll('a[onclick*="launchActivity"]');
+        links.forEach(link => {
+            const onclick = link.getAttribute('onclick');
+            if (onclick && onclick.includes("'_blank'")) {
+                link.setAttribute('onclick', onclick.replace("'_blank'", "null"));
+            }
+        });
     }
 
     unlockUI();
