@@ -86,6 +86,12 @@
     }
     hookedLaunchActivity.isMyHook = true;
 
+    window.addEventListener('load', () => {
+        window.isLaunching = true;
+        setTimeout(() => {
+            window.isLaunching = false;
+        }, 3000);
+    });
 
     var checkTimer = setInterval(function() {
         if (typeof window.launchActivity === 'function') {
