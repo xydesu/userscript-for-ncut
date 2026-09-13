@@ -4,12 +4,9 @@
 
 | 腳本名稱 | 功能描述 | 安裝 |
 | :--- | :--- | :---: |
-| **NCUT e-learn SCORM Path Fixer** | **同步載入優化器**<br>將 SCORM 目錄由同步改為非同步載入，解決進入課程時網頁凍結 (Not Responding) 的問題。 | [⬇️](https://raw.githubusercontent.com/xydesu/userscript-for-ncut/refs/heads/main/NCUT%20e-learn%20SCORM%20Path%20Fixer.user.js) |
-| **NCUT e-learn PDF Downloader** | **PDF 下載器**<br>在平台的 PDF 閱讀器頁面中解鎖下載權限，自動偵測隱藏按鈕並提供浮動下載鈕。 | [⬇️](https://raw.githubusercontent.com/xydesu/userscript-for-ncut/main/NCUT%20e-learn%20PDF%20Downloader.user.js) |
-| **NCUT e-learn Function Unlocker** | **功能限制解鎖**<br>恢復右鍵選單、選取複製文字 (Enable Copy)、F12 開發者工具。 | [⬇️](https://raw.githubusercontent.com/xydesu/userscript-for-ncut/main/NCUT%20e-learn%20Function%20Unlocker.user.js) |
-| **NCUT e-learn Block New Page** | **攔截新分頁開啟**<br>透過 API 獲取課程連結，攔截 `launchActivity` 以精確阻止新分頁開啟，直接在 iframe 中載入內容 (若非外部連結)。 | [⬇️](https://raw.githubusercontent.com/xydesu/userscript-for-ncut/main/NCUT%20e-learn%20Block%20New%20Page.user.js) |
-| **NCUT e-learn Course Export** | **匯出教材清單**<br>在課程頁面新增「匯出教材清單」按鈕，可抓取該課程所有教材的標題與直接連結。 | [⬇️](https://raw.githubusercontent.com/xydesu/userscript-for-ncut/main/NCUT%20e-learn%20Course%20Export.user.js) |
-| **NCUT NMSD Auto Redirect** | **自動重定向**<br>訪問勤益入口網 (nmsd) 首頁時，自動導向至 wbcmss 系統。 | [⬇️](https://raw.githubusercontent.com/xydesu/userscript-for-ncut/main/NCUT%20NMSD%20Auto%20Redirect.user.js) |
+| **NCUT SSO Bookmark** | 在勤益單一入口 (SSO) 的學生專區選單中加入星號 (★) 收藏按鈕，於儀表板首頁新增「常用快捷功能」卡片，支援自訂功能項目與拖曳排序。 | [⬇️](https://raw.githubusercontent.com/xydesu/userscript-for-ncut/main/NCUT%20SSO%20Bookmark.user.js) |
+| **NCUT e-learn 萬用工具箱**<br>(NCUT e-learn Tool Box) | 全方位整合工具箱，解決學習平台各類操作痛點。包含：SCORM 載入優化防網頁凍結、瀏覽器原生 PDF 閱讀器跳轉與下載支援、解除右鍵/選取/複製與 F12 開發者工具限制、阻擋彈出新視窗改由內嵌播放、教材清單一鍵匯出。內建「⚙️ 腳本設定」面板可自由啟閉各模組。 | [⬇️](https://raw.githubusercontent.com/xydesu/userscript-for-ncut/main/NCUT%20e-learn%20Tool%20Box.user.js) |
+| **NCUT NMSD Auto Redirect** | 訪問勤益入口網 (nmsd) 首頁時，自動重新定向至 wbcmss 系統，省去多餘的點擊。 | [⬇️](https://raw.githubusercontent.com/xydesu/userscript-for-ncut/main/NCUT%20NMSD%20Auto%20Redirect.user.js) |
 
 ## 安裝方式
 
@@ -22,8 +19,9 @@
 
 ## 使用說明
 
-*   安裝後，只需進入 NCUT E-learning 平台 (https://elearn.ncut.edu.tw/)，腳本即會自動在背景運作。
-*   若要暫時關閉功能，可透過瀏覽器擴充功能選單停用該腳本。
+*   **NCUT SSO 平台**：進入 SSO 學生專區點擊星號 ★ 加入常用捷徑，儀表板首頁卡片支援直接點擊、拖曳排序與刪除。
+*   **NCUT E-learning 平台**：進入「全校課程」頁面，頂部導覽列將出現「⚙️ 腳本設定」按鈕，點擊可自訂開啟或關閉各項優化功能。
+*   **NCUT 入口網 (NMSD)**：直接造訪首頁會自動導向 wbcmss 系統。
 
 ## 免責聲明 (Disclaimer)
 
